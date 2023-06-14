@@ -1,0 +1,239 @@
+.whole_nav{
+  width: 100%;
+  height: 60px;
+ 
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 5px grey;
+  position:fixed;
+  z-index: 99;
+}
+
+
+.nav-item a{
+    color:white !important;
+}
+.dot{
+ 
+   background: white;
+   padding: 5px;
+   
+}
+.logo_text{
+  color:green;
+  margin: 0;
+  padding: 0;
+
+}
+.dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between !important;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.navitem{
+    color: black;
+    margin-right: 17px;
+}
+.navitem:hover{
+    color: black;
+    text-decoration: none;
+}
+.logoimg{
+    width: 100%;
+    height: 45px;
+}
+.bglight{
+    background-color: white;
+    /* box-shadow: 0px 1px 1px rgb(242, 237, 237) !important; */
+}
+hr{
+  background-color: white;
+}
+
+.listsize {
+    width: 250px;
+  }
+  .nav-wid {
+    background-color: green !important;
+    
+  }
+  .nav-wid a{
+    color:white;
+    font-size: 16px !important;
+  }
+  .nav-wid a:hover{
+    color:white;
+    text-decoration: none;
+  }
+  .MuiMenu-list {
+    width: 250px !important;
+    height: 250px !important;
+    overflow: auto;
+  }
+  /* .MuiMenu-paper {
+    top: 50px !important;
+  } */
+  
+  .MuiMenuItem-root {
+    margin-bottom: 3px !important;
+    /* border-bottom: 1px solid rgba(42, 159, 34, 0.5) !important; */
+    /* background-color: rgb(14, 71, 52) !important; */
+   
+
+  }
+  .MuiMenuItem-root a{
+    display: flex;
+    align-items: center;
+    color:#000000;
+  }
+  .MuiMenuItem-root a:hover{
+    color: #000000;
+    text-decoration: none;
+  }
+.MuiButtonBase-root:hover a{
+  
+  color: white !important;
+}
+  .MuiList-root a:hover{
+    background-color: darkblue;
+    color: white !important;
+    
+  }
+  .right_nav_link li:hover {
+    background-color: darkblue;
+    color: white !important;
+    
+  }
+  .right_nav_link li:hover .MuiListItemIcon-root{
+    
+    color: white !important;
+  }
+  .searchdiv{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto ;
+    padding: 2px;
+}
+.input-search{
+    width: 100%;
+    height: 80%;
+
+    padding:0px 15px;
+   
+    border: 1px solid #000000 !important;
+    
+}
+
+.form-control:focus{
+  
+    box-shadow: none;
+      
+    }
+
+    
+  
+  .searchdiv .input-group  {
+      width: 90%;
+      
+      border-radius: 15px;
+      background: rgba(246, 241, 241,0.5);
+      margin: auto;
+      padding: 3px ;
+  }
+  
+  
+  .searchdiv .form-control {
+      border:0 !important;
+      border-radius: 15px !important;
+      box-shadow: none !important;
+      margin: 2px;
+      background:transparent !important;
+  }
+  .searchdiv .input-group-text  {
+  width: auto;
+  background: green;
+  border: 0 !important;
+  color: #fff;
+  border-radius: 15px !important;
+      box-shadow: none !important;
+      padding: 0 15px !important;
+  }
+  
+
+  .modbox{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .smbox{
+    min-width:300px ;
+    height: auto;
+    background-color: white;
+    /* padding: 15px; */
+    position: relative;
+  }
+
+  .sm_box{
+    width:400px ;
+    height: auto;
+    background-color: white;
+    /* padding: 15px; */
+    position: relative;
+  }
+  .bigbox{
+    width:600px ;
+    height: auto;
+    background-color: white;
+    /* padding: 15px; */
+    position: relative;
+    padding: 15px;
+  }
+  .btn_close{
+    width: 25px;
+    height: 25px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:-10px;
+    right: -10px;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+  }
+
+
+  @media (max-width:450px) {
+    .sm_box{
+      width:90% ;
+      
+    }
+  }
+  @media (max-width:700px) {
+    .bigbox{
+      width:90% ;
+      
+    }
+  }
+
+  
