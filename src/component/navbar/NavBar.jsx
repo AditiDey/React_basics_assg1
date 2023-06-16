@@ -42,6 +42,23 @@ const NavBar = ({ userDetails, loginstaus }) => {
       display: 'AboutUs',
       path: '/about',
     },
+    {
+      display:'ReduxExample',
+      path:'/reduxexample',
+    },
+    {
+      
+        display:'NextScreen',
+        path:'/nextScreen',
+      
+    },
+    {
+      
+      display:'Apicall',
+      path:'/Apicall',
+    
+  },
+  
   ];
 
   return (

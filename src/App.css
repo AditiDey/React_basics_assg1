@@ -57,6 +57,15 @@
   background-color: rgb(10, 80, 186) !important;
   box-shadow: none !important;
 }
+.button-with-api {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
 button{
   box-shadow: none !important;
 }

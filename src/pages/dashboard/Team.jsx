@@ -1,26 +1,32 @@
-import React, { useEffect } from 'react';
-import './Team.css';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+
 import SideBar from '../../component/sidebar/SideBar';
-import { useState } from 'react';
 
 const Team = () => {
-  const his = useHistory();
-
-  const [selectedOption, setSelectedOption] = useState('');
+  const history = useHistory();
+  const selectedOption = useSelector((state) => state.selectedOption);
+  const aboutUsDetails = useSelector((state) => state.aboutUsDetails);
 
   const handleDropdownChange = (event) => {
-    setSelectedOption(event.target.value);
+    history.push(`/team/${event.target.value}`);
   };
 
   const renderTeamDetails = () => {
+    if (!aboutUsDetails) {
+      return null;
+    }
+
+    const { name, email, phone } = aboutUsDetails;
+
     if (selectedOption === 'tech') {
       return (
         <div>
           <br />
           <h5>Technical Team</h5>
           {/* Render details of technical team members */}
-
+          {/* Use the about us details from Redux state in the text fields */}
           <div className="row">
             <div className="col-lg-4 col-md-6 col-12  mb-3">
               <div className="card team">
@@ -28,45 +34,12 @@ const Team = () => {
                 <div className="p-2">
                   <h2>Shivani Gupta</h2>
                   <p>Software Engineer 2</p>
-                  <p>Phone Number:9630508256</p>
-                  <p>Email id:shivani.gupta@arthmate.co.in</p>
+                  <p>Phone Number: {phone}</p>
+                  <p>Email id: {email}</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-12  mb-3">
-              <div className="card team">
-                <img src="http://localhost:3000/image/kartheek.jpg" alt="" />
-                <div className="p-2">
-                  <h2>Gopi Kartheek</h2>
-                  <p>Software Engineer</p>
-                  <p>Phone Number:9381272954</p>
-                  <p>Email id:gopi.kartheek@arthmate.co.in</p>
-
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12  mb-3">
-              <div className="card team">
-                <img src="http://localhost:3000/image/mr_p.jpg" alt="" />
-                <div className="p-2">
-                  <h2>Prarabdha Soni</h2>
-                  <p>Software Engineer 2</p>
-                  <p>Phone Number:8118898113</p>
-                  <p>Email id:prarabdha.soni@arthmate.co.in</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12  mb-3">
-              <div className="card team">
-                <img src="http://localhost:3000/image/pradeep.jpg" alt="" />
-                <div className="p-2">
-                  <h2>Pradeep Jaiswal</h2>
-                  <p>Software Engineer </p>
-                  <p>Phone Number:9987074788</p>
-                  <p>Email id:pradeep.jaiswal@arthmate.co.in</p>
-                </div>
-              </div>
-            </div>
+            {/* Add more technical team members */}
           </div>
         </div>
       );
@@ -76,7 +49,7 @@ const Team = () => {
           <br />
           <h5>Product Team</h5>
           {/* Render details of product team members */}
-
+          {/* Use the about us details from Redux state in the text fields */}
           <div className="row">
             <div className="col-lg-4 col-md-6 col-12  mb-3">
               <div className="card team">
@@ -84,25 +57,13 @@ const Team = () => {
                 <div className="p-2">
                   <h2>Simran Singh</h2>
                   <p>Associate Product Manager</p>
-                  <p>Phone Number:8357016347</p>
-                  <p>Email id:simran.singh@arthmate.co.in</p>
+                  <p>Phone Number: {phone}</p>
+                  <p>Email id: {email}</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-12  mb-3">
-              <div className="card team">
-                <img src="http://localhost:3000/image/raj.jpg" alt="" />
-                <div className="p-2">
-                  <h2>Raj Vikram Singh</h2>
-                  <p>Associate Product Manager</p>
-                  <p>Phone Number:9871569779</p>
-                  <p>Email id:raj.singh@arthmate.com</p>
-                </div>
-              </div>
-            </div>
+            {/* Add more product team members */}
           </div>
-
-          {/* Add more product team members */}
         </div>
       );
     } else {

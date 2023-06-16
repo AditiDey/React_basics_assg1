@@ -15,6 +15,24 @@ const headerNav = [
     display: 'AboutUs',
     path: '/about',
   },
+  {
+    display:'ReduxExample',
+    path:'/reduxexample',
+  },
+  {
+    
+    display:'NextScreen',
+    path:'/nextScreen',
+    
+  },
+  {
+      
+    display:'Apicall',
+    path:'/Apicall',
+  
+},
+
+
 ];
 const SideBar = () => {
   const { pathname } = useLocation();

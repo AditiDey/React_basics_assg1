@@ -1,21 +1,32 @@
-import React, { useEffect } from 'react';
-import '../dashboard/Team.css';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
-import axios from 'axios';
-
 import SideBar from '../../component/sidebar/SideBar';
-import { useState } from 'react';
-
+//import { useState } from 'react';
 const Home = () => {
-  const his = useHistory();
+  const history = useHistory();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Perform form validation
+    if (name === '' || email === '' || phone === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Redirect to the '/team' page with the form data in the URL
+    const encodedName = encodeURIComponent(name);
+    const encodedEmail = encodeURIComponent(email);
+    const encodedPhone = encodeURIComponent(phone);
+    history.push(`/team?name=${encodedName}&email=${encodedEmail}&phone=${encodedPhone}`);
+  };
+
   return (
     <>
-      <div className="whole__page">
+     <div className="whole__page">
         <div className="left_side_navbar">
           <SideBar />
         </div>
